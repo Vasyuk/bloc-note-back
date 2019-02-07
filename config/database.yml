@@ -1,0 +1,16 @@
+development:
+  adapter: mysql2
+  encode: utf8
+  database: bloc_note_dev
+  pool: 25
+  username: root
+  password: <%= ENV["DB_DEVELOP_PEECH"] %>
+  host: 127.0.0.1
+production:
+  adapter: mysql2
+  encode: utf8
+  database: bloc_note_prod
+  pool: 25
+  username: root
+  password: <%= ENV["DB_DEVELOP_PEECH"] %>
+  host: 127.0.0.1
