@@ -1,8 +1,10 @@
 class NoteController < ApplicationController
 
     def create
-      note = Note.create(title: params[:title],note: params[:note])
-      render json: note
+      note = Note.new(title: params[:title],note: params[:note])
+      if note.save
+        render json: note
+      end
     end
 
     def edit
